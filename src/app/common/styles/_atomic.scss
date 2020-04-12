@@ -1,0 +1,67 @@
+// atomic styles
+@import './variables';
+
+.atomic {
+  &-separator {
+    &--intro {
+      display: block;
+
+      @media (min-width: 600px) {
+        display: flex;
+      }
+    }
+  }
+  &-container {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+  &-visibility {
+    &--hidden {
+      display: none;
+    }
+  }
+  &-padding {
+    &--small {
+      margin: 0;
+      padding: $safety-zone-s $safety-zone-m;
+    }
+  }
+  &--strong {
+    font-weight: bold;
+  }
+  &-twitter {
+    padding-top: 10px;
+  }
+  &-hide {
+    display: none;
+    @media (min-width: 600px) {
+      display: block;
+    }
+    &--desktop {
+      display: block;
+      @media (min-width: 600px) {
+        display: none;
+      }
+    }
+  }
+  &-style {
+    &--italic {
+      font-style: italic;
+      color: $c-wtm-dark-blue;
+    }
+    &--light {
+      color: $c-white;
+    }
+    &--large {
+      font-size: $font-size-m;
+
+      @media (min-width: 768px) {
+        font-size: $font-size-l;
+      }
+    }
+  }
+  &-txtalign--center {
+    text-align: center;
+    padding: 10px 0;
+  }
+}

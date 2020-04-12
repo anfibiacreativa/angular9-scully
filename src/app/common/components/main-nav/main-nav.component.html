@@ -1,0 +1,12 @@
+<div class="atomic-container">
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item routerLink="/event" routerLinkActive="active">Event</button>
+        <button mat-menu-item routerLink="/sponsors" routerLinkActive="active">Sponsors</button>
+        <button mat-menu-item routerLink="/speakers" routerLinkActive="active">Speakers</button>
+        <button mat-menu-item routerLink="/agenda" routerLinkActive="active">Agenda</button>
+        <button mat-menu-item routerLink="/venue" routerLinkActive="active">Venue</button>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+      <mat-icon>dehaze</mat-icon>
+    </button>
+</div>

@@ -1,0 +1,105 @@
+// stage component styles
+@import '../../styles/variables';
+
+$agenda-padding: 10px;
+$session-type-padding: 3px;
+
+.agenda {
+  &__base {
+    width: 100%;
+    height: auto;
+    background-color: $c-wtm-light-grey;
+  }
+  &__break {
+    background-color: $c-wtm-background-color;
+    border: 3px solid $c-white;
+  }
+  &__hl {
+    padding: $agenda-padding;
+  }
+  &__sponsors {
+    display: none;
+    @media (min-width: 600px) {
+      display: flex;
+    } 
+  }
+  &__tracks {
+    display: block;
+    @media (min-width: 600px) {
+      display: flex;
+    } 
+  }
+  &__track {
+    width: 100%;
+    box-sizing: border-box;
+    padding: $agenda-padding;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 600px) {
+      width: 50%;
+    }
+  }
+  &__sponsor {
+    width: 100%;
+    @media (min-width: 600px) {
+      width: 50%;
+    }
+    &--one,
+    &--three {
+      background-color: $c-wtm-green;
+      color: $c-white;
+    }
+    &--two {
+      background-color:$c-wtm-dark-blue;
+      color: $c-white;
+    }
+  }
+  &__label {
+    font-weight: bold;
+    color: $c-white;
+  }
+  &__slot {
+    &Wrapper {
+      border: 1px solid $c-white;
+      background-color: $c-white;
+      border-bottom: 10px solid $c-wtm-light-blue;
+      padding: 10px;
+      flex: 1;
+    }
+  }
+  &__slotHl {
+    color: $c-wtm-dark-blue;
+    font-weight: bold;
+    font-size: 18px;
+
+    @media(min-width: 600px) {
+      font-size: 24px;
+    }
+  }
+  &__timeSlot,
+  &__sessionType {
+    padding: 7px 15px;
+    background-color: $c-wtm-background-color;
+    display: inline-block;
+    margin: 5px 0;
+    color: $c-white;
+  }
+  &__sessionType {
+    margin-left: $session-type-padding;
+    color: $c-wtm-dark-grey;
+    background-color: $c-wtm-yellow;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+  &__speaker {
+    color: $c-wtm-green;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  &__language {
+    &--tag {
+      font-style: italic;
+    }
+  }
+}

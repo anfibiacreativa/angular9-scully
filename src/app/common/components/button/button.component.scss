@@ -1,0 +1,60 @@
+// button component styles
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.button {
+  &__base {
+    @include setTransition(all, $style-linear);
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+
+    text-transform: uppercase;
+    border-radius: 3px;
+
+    &--red {
+      border: 1px solid $c-button-red;
+      background-color: $c-button-red;
+      color: $c-white;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $c-white;
+        background-color: $c-white;
+        color: $c-button-red;
+      }
+    }
+
+    &--green {
+      border: 1px solid $c-button-green;
+      background-color: $c-button-green;
+      color: $c-white;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $c-white;
+        background-color: $c-white;
+        color: $c-button-green;
+      }
+    }
+
+    &--yellow {
+      border: 1px solid $c-wtm-yellow;
+      background-color: $c-wtm-yellow;
+      color: $c-white;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $c-wtm-yellow;
+        background-color: $c-white;
+        color: $c-wtm-yellow;
+      }
+    }
+  }
+}
+
+// hack material button item background color
+.mat-menu-item {
+  background-color: $c-white;
+}

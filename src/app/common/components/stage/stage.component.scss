@@ -1,0 +1,42 @@
+// stage component styles
+@import '../../styles/variables';
+
+.stage {
+  &__base {
+    color: $c-white;
+    margin-top: $safety-zone-s;
+
+    @media (min-width: 600px) {
+      margin-top: $safety-zone-l+20px;
+    }
+    // hack GDG logo in stage
+    .footer__logo {
+      margin: -6px 0;
+      display: inline-block;
+    }
+  }
+  &__hl {
+    font-size: $font-size-m;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px $c-wtm-dark-grey;
+
+    @media (min-width: 500px) {
+      font-size: $font-size-l;
+    }
+  }
+  &__txt {
+    font-size: 24px;
+    line-height: 1.6;
+    &.atomic-special--date {
+      font-style: italic;
+    }
+  }
+  // hack button styles
+  .caption__button {
+    margin-bottom: 10px;
+  }
+  .footer__span {
+    margin-top: 5px;
+    display: inline-block;
+  }
+}

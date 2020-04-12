@@ -1,0 +1,168 @@
+// main content styles
+// define the page layout
+@import './variables';
+@import './mixins';
+$max-logo-width: 280px;
+$max-logo-width-smallmobile: 255px; 
+
+.header {
+  &__base {
+    @include boxShadow();
+    background-color: $c-white;
+    width: 100%;
+    position: fixed;
+    height: $safety-zone-l;
+    z-index: 1;
+    top: 0;
+  }
+  &__logo {
+    max-width: $max-logo-width;
+    @media(max-width: 600px) {
+      max-width: $max-logo-width-smallmobile;
+    }
+  }
+}
+.main {
+  &__base {
+    max-width: 100%;
+    min-height: 180px;
+
+    @media(min-width: 600px) {
+      min-height: 700px;
+    }
+  }
+}
+
+.caption {
+  &__txt {
+    line-height: 1.3;
+  }
+}
+
+.aside {
+  &__wrapper {
+    width: 90%;
+    margin: 0 auto;
+
+    @media(min-width: 600px) {
+      width: 500px;
+    }
+  }
+  &__base {
+    &.clear {
+      //min-height: $min-height;
+      color: $c-wtm-dark-grey;
+      background-color: $c-wtm-light-grey;
+
+      .atomic-style {
+        &--italic {
+          color: $c-wtm-dark-blue;
+        }
+      }
+    }
+    &.dark {
+      background-color: $c-wtm-background-red;
+      color: $c-white;
+
+      .atomic-style {
+        &--italic {
+          color: $c-wtm-light-grey;
+        }
+      }
+    }
+  }
+  &__txt {
+    line-height: 1;
+    padding-bottom: $safety-zone-s;
+  }
+  &__hl {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.footer {
+  &__base {
+    padding-top: $safety-zone-m;
+    min-height: 200px;
+    background-color: $c-wtm-dark-grey;
+    color: $c-white;
+  }
+  &__disclaimer {
+    padding-top: $safety-zone-s;
+    text-align: center;
+  }
+
+  &__logo {
+    display: block;
+    margin: 5px auto;
+  }
+
+  &__span {
+    &:first-child {
+      display: block;
+      line-height: 2;
+    }
+  }
+
+  &__link {
+    color: $c-white;
+
+    &:visited,
+    &:active,
+    &:link {
+      color: $c-white;
+    }
+  }
+
+  &__nav {
+    text-align: center;
+
+    &Link {
+      color: $c-white;
+      position: relative;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &.twitter {
+        &:after {
+          background-image: url('/assets/social/twitter.png');;
+        }
+      }
+      &.linkedin {
+        &:after {
+          background-image: url('/assets/social/linkedin.png');;
+        }
+      }
+      &.meetup{
+        &:after {
+          background-image: url('/assets/social/meetup.png');;
+        }
+      }
+    }
+  }
+}
+
+.spinner {
+  &__base {
+    .mat-progress-spinner,
+    .mat-spinner {
+      margin: 100px auto;
+      circle  {
+        stroke: $c-white;
+      }
+    }
+  }
+}

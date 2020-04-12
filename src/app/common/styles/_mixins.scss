@@ -1,0 +1,27 @@
+// mixins
+@import './variables';
+
+// base font styles
+@mixin base-font() {
+  font-size: $font-size-s;
+  -webkit-font-smoothing: auto;
+  line-height: 1.5;
+}
+
+// transition
+@mixin setTransition($t-type, $t-effect) {
+  transition: $t-type .3s $t-effect;
+}
+
+// button
+@mixin setButton($c-bg, $c-label, $r-radius) {
+  background-color: $c-bg;
+  color: $c-label;
+  border-radius: $r-radius;
+}
+
+@mixin boxShadow() {
+  -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
+}

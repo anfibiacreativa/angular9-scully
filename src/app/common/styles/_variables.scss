@@ -1,0 +1,46 @@
+// Variable definitions
+
+@import '~@angular/material/theming';
+// @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+@import './colors';
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, Google-Sans, monospace',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 32px, 300)
+);
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($custom-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($custom-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
+// Override the typography in the core CSS.
+@include mat-core($custom-typography);
+
+// @include angular-material-theme($theme);
+
+
+// margins
+$safety-zone-s: 20px;
+$safety-zone-m: 50px;
+$safety-zone-l: 80px;
+$safety-zone-xl: 150px;
+
+// max layout width
+$max-width: 960px;
+
+// min block height
+$min-height: 300px;
+
+// transitions
+$style-easeinout: ease-in-out;
+$style-linear: linear;
+
+// fonts
+$font-size-s: 16px;
+$font-size-m: 18px;
+$font-size-l: 40px;

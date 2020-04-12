@@ -1,0 +1,48 @@
+<main class="main__base">
+  <div class="main__content">
+    <section id="speakers" *ngIf="show_speakers"
+      class="section__base speakers atomic-padding--none grid__base grid__base--right grid__base--nomobile">
+      <div class="aside__base atomic-padding--small clear">
+        <div class="atomic-container">
+          <div>
+            <h2 class="aside__hl">Meet our awesome speakers!</h2>
+            <p class="aside__txt">Below you can find the agenda for our two tracks, one in Spanish and one in English!</p>
+          </div>
+          <div>
+            <h2 class="aside__hl atomic-style--italic">¡Conoce a nuestras ponentes!</h2>
+            <p class="aside__txt atomic-style--italic">¡Debajo encontrarás la agenda completa para nuestros dos tracks, uno
+              enespañol y otro en inglés!</p>
+          </div>
+        </div>
+      </div>
+      <app-teaserlist [type]="teaserType.Speaker"></app-teaserlist>
+    </section>
+    <section *ngIf="show_sponsors" id="sponsors"
+      class="section__base sponsors atomic-padding--none grid__base atomic-grid--mobile">
+      <div class="aside__base atomic-padding--small dark">
+        <div class="aside__wrapper">
+          <h2 class="aside__hl">Meet our sponsors</h2>
+          <p class="aside__txt">The following companies support our event and diversity integration in Barcelona.</p>
+          <p class="aside__txt">Thank you for making this possible!</p>
+          <h2 class="aside__hl atomic-style--italic">Conoce a nuestros sponsors</h2>
+          <p class="aside__txt atomic-style--italic">Nuestros sponsors apoyan nuestro evento y la diversidad e
+            integración, en Barcelona. ¡Gracias por hacerlo posible!</p>
+        </div>
+      </div>
+      <app-teaserlist [type]="teaserType.Sponsor"></app-teaserlist>
+    </section>
+    <section id="organizers" *ngIf="show_organizers"
+      class="section__base organizers atomic-padding--none grid__base grid__base--right">
+      <app-teaserlist [type]="teaserType.Organizer"></app-teaserlist>
+      <div class="aside__base atomic-padding--small clear">
+        <h2 class="aside__hl">Join us!</h2>
+        <p class="aside__txt">Be part of our vibrant and active community, and participate of our meetups and other
+          events.</p>
+        <h2 class="aside__hl atomic-style--italic">¡Únete!</h2>
+        <p class="aside__txt atomic-style--italic">Participa de una comunidad activa y vibrante, y se parte de nuestros
+          eventos y meetups.</p>
+        <h2 class="aside__hl atomic-style--large atomic-hide">{{twitter_hastags}}</h2>
+      </div>
+    </section>
+  </div>
+</main>

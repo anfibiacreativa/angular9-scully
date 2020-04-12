@@ -1,0 +1,145 @@
+// section default styles
+@import './variables';
+@import './mixins';
+
+.section {
+  &__base {
+    padding: $safety-zone-m $safety-zone-s*2;
+
+    &.first-section {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    &.atomic-padding {
+      &--none {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &.atomic-padding {
+      &--small {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &.sponsors {
+      padding-top: 0;
+      background-color: $c-white;
+      padding-bottom:$safety-zone-m;
+
+      .mat-grid-tile {
+
+        background-color: $c-white;
+        .mat-figure {
+          padding: 0 10px;
+        }
+      }
+    }
+    &.speakers {
+      padding-top: 0;
+      background-color: $c-wtm-medium-grey;
+
+      .aside__base {
+        .atomic-container {
+          @media(min-width: 675px) {
+            text-align: center;
+          }
+        }
+      }
+
+      .atomic-container {
+        @media(min-width: 675px) {
+          max-width: 90%;
+        }
+      }
+
+      // tiles overrides!
+      .mat-grid-tile .mat-figure {
+        justify-content: left;
+        padding-left: $safety-zone-s; 
+      }
+
+      .teaser {
+        &__image {
+          display: flex;
+          padding: $safety-zone-s;
+        }
+        &__figure {
+          max-width: 150px;
+          min-width: 150px;
+          margin: 0 auto;
+        }
+        &__hl,
+        &__subHl {
+          color: $c-wtm-dark-blue;
+          font-weight: bold;
+          font-size: 18px;
+
+          @media(min-width: 675px) {
+            font-size: 30px;
+          }
+        }
+        &__hl {
+
+          @media(max-width: 400px) {
+            padding-top: 20px;
+          }
+        }
+        &__subHl,
+        &__social {
+          font-size: 16px;
+
+          @media(min-width: 675px) {
+            font-size: 22px;
+          }
+        }
+        &__social {
+          color: $c-wtm-green;
+          line-height: 3;
+
+          @media(min-width: 675px) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    &.cta {
+      background-color: $c-wtm-background-color-section;
+
+      &.atomic-background {
+        &--highlight {
+          background-color: $c-wtm-background-color-highlight;
+          color: $c-wtm-text-highlight;
+        }
+      }
+    }
+    &.organizers {
+      background-color: $c-wtm-yellow;
+
+      .teaser {
+        &__wrapper {
+          max-width: 600px;
+        }
+        &__hl {
+          font-size: 36px;
+        }
+        &__base {
+          padding: 20px;
+        }
+        &__figure {
+          padding:10px; 
+        }
+      }
+    }
+    &.agenda {
+      background-color: $c-wtm-medium-grey;
+
+      .section__base {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+// textimage component styles
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.textimage {
+  &__base {
+    background-color: $c-wtm-dark-blue;
+    color: $c-white;
+  }
+  &__txt {
+    @include base-font;
+  }
+  &__section {
+    margin-top: $safety-zone-s;
+  }
+  &__hl {
+    font-size: 32px;
+  }
+}

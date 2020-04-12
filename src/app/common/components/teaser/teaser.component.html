@@ -1,0 +1,117 @@
+<section class="section__base atomic-padding--small">
+    <div class="teaser__base">
+        <div class="teaser__wrapper teaser__wrapper--speakers atomic-container" *ngIf="collection === 'speakers'">
+          <div *ngFor="let item of data" class="teaser__list">
+            <div class="teaser__extended--left teaser__listItem">
+              <div class="teaser__image">
+                <div class="teaser__figure">
+                  <img alt="{{item.pic1}} speaker at IWD Barcelona 2020" src="assets/speakers/{{item.pic1}}.png" layout-fill/>
+                </div>
+                <div *ngIf="item.pic2 && item.pic2 !== ''" class="teaser__figure">
+                  <img alt="{{item.pic2}} speaker at IWD Barcelona 2020" src="assets/speakers/{{item.pic2}}.png" layout-fill/>
+                </div>
+              </div>
+              <div class="teaser__type">
+                  <h3 class="teaser__hl">{{item.name}}</h3>
+                  <a *ngIf="item.twitter1 && item.twitter1 !== ''" href="https://www.twitter.com/{{item.twitter1}}" class="teaser__social atomic--twitter"><span>@</span>{{item.twitter1}}</a>
+                  <a *ngIf="item.twitter2 && item.twitter2 !== ''" href="https://www.twitter.com/{{item.twitter2}}" class="teaser__social atomic--twitter"><span>@</span>{{item.twitter2}}</a>
+                  <a *ngIf="item.linkedin1 && item.linkedin1 !== ''" href="{{item.linkedin1}}" class="teaser__social atomic--twitter">LinkedIn</a>
+                  <a *ngIf="item.linkedin2 && item.linkedin2 !== ''" href="{{item.linkedin2}}" class="teaser__social atomic--twitter"> | LinkedIn</a>
+                  <details class="teaser__details">
+                    <summary class="teaser__detailsSummary">Bio</summary>
+                    <p class="teaser__txt">{{item.bio}}</p>
+                  </details>
+              </div>
+            </div>
+            <div class="teaser__extendedWrapper">
+              <div class="teaser__extendedInner">
+                  <h3 class="teaser__subHl">{{item.session}}</h3>
+                  <details class="teaser__details">
+                    <summary class="teaser__detailsSummary">Session Info | Sumario</summary>
+                    <p class="teaser__txt">{{item.summary}}</p>
+                  </details>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="teaser__wrapper" *ngIf="collection === 'sponsors'">
+            <h2 class="teaser__hl">Golden Sponsors</h2>
+            <mat-grid-list [cols]="breakpointTwo" rowHeight="2:1" (window:resize)="onResize($event)">
+                <div *ngFor="let item of data">
+                    <mat-grid-tile *ngIf="item.type === 'gold'">
+                      <div class="teaser__image">
+                        <div class="teaser__figure">
+                          <a href="{{item.web}}" title=""><img alt="logo {{item.logo}}" src="assets/logos/{{item.logo}}.png" layout-fill/></a>
+                        </div>
+                      </div>
+                      <div class="teaser__type {{item.type}}">
+                          <h3 class="teaser__hl atomic-visibility--hidden">{{item.name}}</h3>
+                      </div>
+                    </mat-grid-tile>
+                </div>
+            </mat-grid-list>
+            <h2 class="teaser__hl">Silver Sponsors</h2>
+            <mat-grid-list [cols]="breakpointOne" rowHeight="2:1" (window:resize)="onResize($event)">
+              <div *ngFor="let item of data">
+                  <mat-grid-tile *ngIf="item.type === 'silver'">
+                    <div class="teaser__image">
+                      <div class="teaser__figure">
+                        <a href="{{item.web}}" title=""><img alt="logo {{item.logo}}" src="assets/logos/{{item.logo}}.png" layout-fill/></a>
+                      </div>
+                    </div>
+                    <div class="teaser__type {{item.type}}">
+                        <h3 class="teaser__hl atomic-visibility--hidden">{{item.name}}</h3>
+                    </div>
+                  </mat-grid-tile>
+              </div>
+            </mat-grid-list>
+<!--             <h2 class="teaser__hl">Bronze Sponsors</h2>
+            <mat-grid-list [cols]="breakpointOne" rowHeight="2:1" (window:resize)="onResize($event)">
+              <div *ngFor="let item of data">
+                  <mat-grid-tile *ngIf="item.type === 'bronze'">
+                    <div class="teaser__image">
+                      <div class="teaser__figure">
+                        <a href="{{item.web}}" title=""><img alt="logo {{item.logo}}" src="assets/logos/{{item.logo}}.png" layout-fill/></a>
+                      </div>
+                    </div>
+                    <div class="teaser__type {{item.type}}">
+                        <h3 class="teaser__hl atomic-visibility--hidden">{{item.name}}</h3>
+                    </div>
+                  </mat-grid-tile>
+              </div>
+            </mat-grid-list> -->
+            <h2 class="teaser__hl">Supporting</h2>
+            <mat-grid-list [cols]="breakpointOne" rowHeight="2:1" (window:resize)="onResize($event)">
+              <div *ngFor="let item of data">
+                  <mat-grid-tile *ngIf="item.type === 'support'">
+                    <div class="teaser__image">
+                      <div class="teaser__figure">
+                        <a href="{{item.web}}" title=""><img alt="logo {{item.logo}}" src="assets/logos/{{item.logo}}.png" layout-fill/></a>
+                      </div>
+                    </div>
+                    <div class="teaser__type {{item.type}}">
+                        <h3 class="teaser__hl atomic-visibility--hidden">{{item.name}}</h3>
+                    </div>
+                  </mat-grid-tile>
+              </div>
+            </mat-grid-list>
+        </div>
+        <div class="teaser__wrapper" *ngIf="collection === 'organizers'">
+            <h2 class="teaser__hl">Organizers</h2>
+            <mat-grid-list [cols]="breakpointThree" rowHeight="1:1" (window:resize)="onResize($event)">
+                <div *ngFor="let item of data">
+                    <mat-grid-tile>
+                      <div class="teaser__image">
+                        <div class="teaser__figure">
+                          <img alt="logo {{item.pic}}" src="assets/organizers/{{item.pic}}.png" layout-fill/>
+                        </div>
+                      </div>
+                      <div class="teaser__type {{item.type}}">
+                          <h3 class="teaser__hl atomic-visibility--hidden">{{item.name}}</h3>
+                      </div>
+                    </mat-grid-tile>
+                </div>
+            </mat-grid-list>
+        </div>
+    </div>
+</section>

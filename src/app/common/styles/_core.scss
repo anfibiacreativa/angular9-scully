@@ -1,0 +1,22 @@
+@import './variables.scss';
+
+
+// All common styles
+body {
+  background-image: url('/assets/wtmbcn.png');
+  background-repeat:no-repeat;
+  background-size: contain;
+  background-position: top center;
+  background-color: $c-wtm-dark-grey;
+  background-blend-mode: color-dodge;
+  max-width: 100%;
+  font-family: mat-font-family($custom-typography);
+  font-weight: 300;
+}
+
+h1, h2, h3, h4 {
+  font-family: mat-font-family($custom-typography);
+  padding: $safety-zone-s 0;
+  font-weight: 300;
+}
+

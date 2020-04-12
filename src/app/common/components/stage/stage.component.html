@@ -1,0 +1,53 @@
+<section class="section__base atomic--container">
+    <div class="stage__base">
+        <div class="stage__description">
+            <h3 class="stage__hl">{{title}}</h3>
+            <div class="stage__infoWrapper">
+              <span class="stage__txt atomic-special--date">{{date}} </span>
+              <span class="stage__txt">{{venue}}</span>
+            </div>
+            <div class="caption__button">
+                <a class="button__base button__base--red" [href]="getSafeTicketLink()" title="get free tickets">{{button_label}}</a>
+            </div>
+            <span class="footer__span">Powered by</span><img src="assets/gdg.png" class="footer__logo" alt="Powered by GDG BCN" width="130" />
+          </div>
+    </div>    
+  </section>
+  <section class="section__base first-section">
+    <app-textimage></app-textimage>
+    <div class="atomic-separator atomic-separator--intro">
+      <section class="section__base cta">
+        <div class="atomic-container">
+          <div class="caption__base">
+            <p class="caption__txt">Tickets are limited! Don't miss them out! Stay tuned for availability</p>
+          </div>
+          <div class="caption__base">
+            <p class="caption__txt atomic-style--italic">Las entradas son limitadas ¡No te las pierdas! Mantente al
+              tanto de nuestras noticias, para enterarte cuando abramos la disponibilidad</p>
+          </div>
+          <div class="caption__button">
+            <a [href]="getSafeTicketLink()" title="get free tickets"
+              class="button__base button__base--red">{{button_label}}</a>
+          </div>
+        </div>
+      </section>
+      <section class="section__base cta">
+        <div class="atomic-container">
+          <div class="caption__base">
+            <p class="caption__txt"><b>International Women’s Day is a completely free access event</b>, and the kind
+              support of our sponsors is vital to make it possible. This is why, we would like to invite you to review
+              our sponsorship plan</p>
+          </div>
+          <div class="caption__base">
+            <p class="caption__txt atomic-style--italic"><b>International Women’s Day es un evento completamente
+                gratuito para los asistentes</b>, por lo que el apoyo de nuestros sponsors es vital para hacerlo
+              posible. Les invitamos a visitar nuestra presentación para sponsors <a
+                [href]="getSafeSponsorsDossierLink()">haciendo click aqui</a></p>
+          </div>
+          <div class="caption__button">
+            <app-button></app-button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
