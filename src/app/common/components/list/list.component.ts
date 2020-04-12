@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy, Input, ViewChild } from '@angular/core';
-import { TeaserType } from '../../enums/teasertypes.enum';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { CONFIG_URLS, CONFIG_VISIBILITY, CONFIG_TXT } from '../../constants/site.constants';
+import { CONFIG_URLS, CONFIG_TXT } from '../../constants/site.constants';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
