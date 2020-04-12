@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TeaserlistComponent, StageComponent, AgendaComponent, VenueComponent } from './common/components';
+import { ListComponent, StageComponent, AgendaComponent, VenueComponent } from './common/components';
 
 const routes: Routes = [
   {
@@ -9,12 +9,19 @@ const routes: Routes = [
   },
   {
     path: 'sponsors',
-    component: TeaserlistComponent,
-    data: { title: 'Heroes List' }
+    component: ListComponent,
+    data: { 
+      teaserType: 1,
+      show_sponsors: true
+    }
   },
   {
     path: 'speakers',
-    component: TeaserlistComponent
+    component: ListComponent,
+    data: { 
+      teaserType: 0,
+      show_speakers: true
+    }
   },
   {
     path: 'venue',
@@ -22,7 +29,11 @@ const routes: Routes = [
   },
   {
     path: 'organizers',
-    component: TeaserlistComponent
+    component: ListComponent,
+    data: { 
+      teaserType: 2,
+      show_organizer: false
+    }
   },
   {
     path: 'agenda',

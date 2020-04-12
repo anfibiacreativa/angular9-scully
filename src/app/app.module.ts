@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { AgendaComponent } from './common/components/agenda/agenda.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { VenueComponent } from './common/components/venue/venue.component';
+import { ListComponent } from './common/components/list/list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { VenueComponent } from './common/components/venue/venue.component';
     TeaserlistComponent,
     TextimageComponent,
     ContentformComponent,
-    VenueComponent
+    VenueComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

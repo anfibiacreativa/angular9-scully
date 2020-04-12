@@ -7,3 +7,4 @@ export * from './button/button.component';
 export * from './stage/stage.component';
 export * from './agenda/agenda.component';
 export * from './venue/venue.component';
+export * from './list/list.component';
