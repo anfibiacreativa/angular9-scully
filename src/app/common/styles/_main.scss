@@ -26,7 +26,8 @@ $max-logo-width-smallmobile: 255px;
   &__base {
     max-width: 100%;
     min-height: 180px;
-
+    margin-top: 100px;
+    
     @media(min-width: 600px) {
       min-height: 700px;
     }
