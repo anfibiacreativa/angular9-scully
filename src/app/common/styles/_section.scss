@@ -6,6 +6,10 @@
   &__base {
     padding: $safety-zone-m $safety-zone-s*2;
 
+    &.homepage {
+      margin-top: 50px;
+    }
+    
     &.first-section {
       padding-bottom: 0;
       margin-bottom: 0;

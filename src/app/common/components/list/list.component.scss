@@ -1,0 +1,23 @@
+// stage component styles
+@import '../../styles/variables';
+
+.list {
+  pointer-events: none;
+  position: relative;
+
+  &__listItem {
+    padding: 5px 0;
+    position: relative;
+    z-index: 10;
+  }
+  &__link {
+    color: $c-wtm-light-grey;
+    cursor: pointer;
+    font-size: large;
+
+    &:hover {
+      color: $c-wtm-light-green;
+      cursor: pointer;
+    }
+  }
+}
